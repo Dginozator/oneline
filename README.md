@@ -1,10 +1,10 @@
-# Ozon Oneline Scraper
+# Oneline Scraper
 
-A set of tools for collecting product data and images from the [Ozon](https://www.ozon.ru) marketplace: a browser bookmarklet that builds a product grid in the page, and two Python scripts that process the saved page into a structured archive.
+A set of tools for collecting product data and images from a marketplace: a browser bookmarklet that builds a product grid in the page, and two Python scripts that process the saved page into a structured archive.
 
 ## How it works
 
-1. The **bookmarklet** (`bookmarklets/ozon_oneline.js`) is added to the browser. When triggered on an Ozon search page, it replaces the page content with a custom product grid (SKU, name, price, rating, reviews, seller, and image thumbnails with `Last-Modified` dates) and lazily loads additional products as you scroll.
+1. The **bookmarklet** is added to the browser. When triggered on a search page, it replaces the page content with a custom product grid (SKU, name, price, rating, reviews, seller, and image thumbnails with `Last-Modified` dates) and lazily loads additional products as you scroll.
 2. The page is then saved to disk as a complete webpage (`.htm` + a `_files/` folder with all assets).
 3. Two Python scripts process the saved page:
    - `resizer.py` --- downscales images so their height is at most 1200 px (aspect ratio preserved), rewriting files in place.
@@ -18,8 +18,8 @@ A set of tools for collecting product data and images from the [Ozon](https://ww
 
 ## Step-by-step workflow
 
-1. Add the bookmarklet `bookmarklets/ozon_oneline.js` to your browser.
-2. Open the marketplace (ozon.ru).
+1. Add the bookmarklet `bookmarklets/oneline.js` to your browser.
+2. Open the marketplace.
 3. Enter a search query.
 4. Click the bookmarklet.
 5. Gradually scroll to load the desired number of products. The recommended value is **1000**; loading 3500 products consumes roughly **8 GB of RAM** per tab.
