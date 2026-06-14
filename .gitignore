@@ -1,0 +1,14 @@
+# Ignore everything at root level
+/*
+
+# Include target directories (with content)
+!/bookmarklets/
+!/python conversions/
+
+# Include source directory structure but NOT its content
+!/source/
+/source/*
+!/source/.gitkeep
+
+# Include .gitignore itself
+!/.gitignore
