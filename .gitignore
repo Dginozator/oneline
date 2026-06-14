@@ -12,3 +12,6 @@
 
 # Include .gitignore itself
 !/.gitignore
+
+# Include README
+!/README.md
